@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RakshaSetu - Security Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    
+    <div class="auth-container">
+        <!-- Signup Form -->
+        <div id="signup-form">
+            <header>
+                <img style="translate: 127px;" src="Untitled design.png" height="50px" alt="RakshaSetu Logo" class="header-logo">
+                
+                    
+                
+            </header>
+            <h2>Create RakshaSetu Account</h2>
+            <div class="error-message" id="signup-error"></div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+            <div class="switch-form">
+                Already have an account? <a id="showLogin">Login</a>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" style="display: none;">
+            <h2>RakshaSetu Login</h2>
+            <div class="error-message" id="login-error"></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="login-email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="switch-form">
+                Don't have an account? <a id="showSignup">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script   type="module"     src="app.js"></script>
+</body>
+</html>

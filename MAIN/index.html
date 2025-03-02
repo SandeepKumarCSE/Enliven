@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RakshaSetu - Disaster Alert System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="nav.js"></script>
+</head>
+<body>
+    
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation Menu -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav class="nav-menu">
+        <div class="menu-header">
+            <h2>RakshaSetu</h2>
+        </div>
+        <div class="menu-items">
+            <a href="#emergency">Emergency</a>
+            <a href="https://rakshasetu.my.canva.site/">Safety Precautions</a>
+            <a href="#location">Epicentre</a>
+            
+            <a href="#contact">Contact List</a>
+            
+            
+            <a href="./map/index.html">Safe Route</a>
+            <a href="#evacuation">Be a Volunteer</a>
+            <a href="#medical">Medical</a>
+            <a href="#automate">
+                <form > <script  src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Q1kPdyHsPRqFIj" async> </script> </form>
+                </a>
+           
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <header>
+        <img src="icon.png"    style="translate: 30px;"    alt="RakshaSetu Logo" class="header-logo">
+        <div class="header-text">
+            <h1>RakshaSetu</h1>
+            <p>Community Emergency Response Platform</p>
+        </div>
+    </header>
+    <div class="container">
+        
+        <!-- Alert Banner -->
+        <div class="alert-banner blinking">
+            <i class="fas fa-triangle-exclamation"></i>
+            <span>Earthquake of 2.8 magnitude strikes Delhi</span>
+        </div>
+
+        <!-- Weather Section -->
+        <div class="weather-card">
+            <div class="weather-header">
+                <h3><i class="fas fa-radiation"></i> Live Weather Tracker</h3>
+                <div class="location-input">
+                    <input type="text" id="cityInput" placeholder="Enter city name">
+                    <button onclick="getWeather()"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div id="weather-info">Loading weather data...</div>
+        </div>
+
+        <!-- Disaster Alerts -->
+        <div class="disaster-alerts-container">
+            <h2><i class="fas fa-bell"></i> Live Disaster Alerts</h2>
+            <div id="alerts-list" class="alerts-list"></div>
+        </div>
+
+        <!-- Emergency Cards -->
+        <div class="grid">
+            <div class="card emergency-status">
+                <h3><i class="fas fa-circle-exclamation"></i> Emergency Status</h3>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <p>40% Completed</p>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-list-check"></i> Safety Checklist</h3>
+                <p>32 Items Remaining</p>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-map-location-dot"></i> Affected Areas</h3>
+                <p>5 High Risk Zones</p>
+            </div>
+            <div class="card">
+                <h3 style="color: black;" ><i class="fas fa-map-location-dot"></i><a href="./map/index.html" style="color: black; text-decoration: none;" > Hospitals Nearby</a></h3>
+                <p>Fall Back To Safe Zone</p>
+            </div>
+        </div>
+    </div>
+
+    <script  type="module"      src="auto-alerts.js"></script>
+</body>
+</html>
